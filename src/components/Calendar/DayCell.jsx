@@ -1,29 +1,43 @@
-import { format, isSameDay, isWithinInterval, isSameMonth } from "date-fns";
-import { isToday } from "date-fns";
+import { format, isSameDay, isWithinInterval, isSameMonth, isToday } from "date-fns";
 
+export default function DayCell({ day, range, onClick, currentMonth, notes }) {
+  const key = format(day, "yyyy-MM-dd");
 
-export default function DayCell({ day, range, onClick, currentMonth }) {
+  // ✅ range states
   const isStart = range.start && isSameDay(day, range.start);
   const isEnd = range.end && isSameDay(day, range.end);
-const today = isToday(day);
+
   const isBetween =
     range.start &&
     range.end &&
     isWithinInterval(day, { start: range.start, end: range.end });
 
+  const today = isToday(day);
   const isCurrentMonth = isSameMonth(day, currentMonth);
+
+  // ✅ FIXED NOTE CHECK
+  const hasNote =
+  notes &&
+  Array.isArray(notes[key]) &&
+  notes[key].length > 0;
 
   return (
     <div
       onClick={() => onClick(day)}
       className={`p-1 text-sm text-center cursor-pointer rounded-lg
-  text-black
-  ${today ? "border-2 border-red-500 font-bold" : ""}
-  ${isStart || isEnd ? "bg-blue-600 text-white" : ""}
-  ${isBetween && !isStart && !isEnd ? "bg-blue-200 text-black" : ""}
-  hover:bg-blue-100 transition`}
+        ${isCurrentMonth ? "text-black" : "text-gray-400"}
+        ${today ? "border-2 border-red-500 font-bold" : ""}
+        ${isStart || isEnd ? "bg-blue-600 text-white" : ""}
+        ${isBetween && !isStart && !isEnd ? "bg-blue-200 text-black" : ""}
+        hover:bg-blue-100 transition`}
     >
+      {/* ✅ DATE */}
       {format(day, "d")}
+
+      {/* ✅ DOT */}
+      {hasNote && (
+        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mx-auto mt-1"></div>
+      )}
     </div>
   );
 }

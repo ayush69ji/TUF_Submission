@@ -10,14 +10,15 @@ export default function CalendarContainer() {
   const [range, setRange] = useState({ start: null, end: null });
   
   const [notes, setNotes] = useState({});
-const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+
 useEffect(() => {
-  const saved = localStorage.getItem("notes");
-  if (saved) setNotes(JSON.parse(saved));
+  const savedNotes = localStorage.getItem("calendar-notes");
+  if (savedNotes) setNotes(JSON.parse(savedNotes));
 }, []);
 
 useEffect(() => {
-  localStorage.setItem("notes", JSON.stringify(notes));
+  localStorage.setItem("calendar-notes", JSON.stringify(notes));
 }, [notes]);
 
   return (
@@ -36,16 +37,17 @@ useEffect(() => {
     />
 
     <CalendarGrid
-      currentDate={currentDate}
-      range={range}
-      setRange={setRange}
-      setSelectedDate={setSelectedDate}
-    />
+  currentDate={currentDate}
+  range={range}
+  setRange={setRange}
+  setSelectedDate={setSelectedDate}
+  notes={notes}
+/>
   </div>
 
   {/* RIGHT SIDE */}
   <div>
-    <NotesPanel
+   <NotesPanel
   notes={notes}
   setNotes={setNotes}
   selectedDate={selectedDate}

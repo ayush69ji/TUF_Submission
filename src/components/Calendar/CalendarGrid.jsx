@@ -6,7 +6,7 @@ import {
 } from "date-fns";
 import DayCell from "./DayCell";
 
-export default function CalendarGrid({ currentDate, range, setRange, setSelectedDate }) {
+export default function CalendarGrid({ currentDate, range, setRange, setSelectedDate, notes }) {
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
 
@@ -45,11 +45,12 @@ export default function CalendarGrid({ currentDate, range, setRange, setSelected
 
     cells.push(
       <DayCell
-        key={i}
-        day={day}
-        range={range}
-        onClick={handleDateClick}
-      />
+  key={i}
+  day={day}
+  range={range}
+  onClick={handleDateClick}
+  notes={notes}
+/>
     );
   }
 
