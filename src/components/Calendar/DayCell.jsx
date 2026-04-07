@@ -14,6 +14,7 @@ export default function DayCell({ day, range, onClick, currentMonth, notes }) {
 
   const today = isToday(day);
   const isCurrentMonth = isSameMonth(day, currentMonth);
+  const isSunday = day.getDay() === 0;
 
   // ✅ FIXED NOTE CHECK
   const hasNote =
@@ -25,6 +26,7 @@ export default function DayCell({ day, range, onClick, currentMonth, notes }) {
     <div
       onClick={() => onClick(day)}
       className={`p-1 text-sm text-center cursor-pointer rounded-lg
+        ${isSunday ? "text-red-500 font-semibold" : "text-black"}
         ${isCurrentMonth ? "text-black" : "text-gray-400"}
         ${today ? "border-2 border-red-500 font-bold" : ""}
         ${isStart || isEnd ? "bg-blue-600 text-white" : ""}

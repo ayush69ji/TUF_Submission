@@ -9,6 +9,7 @@ import DayCell from "./DayCell";
 export default function CalendarGrid({ currentDate, range, setRange, setSelectedDate, notes }) {
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
+  
 
   const startDay = getDay(monthStart);
   const totalDays = getDate(monthEnd);
