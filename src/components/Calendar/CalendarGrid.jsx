@@ -28,15 +28,15 @@ export default function CalendarGrid({ currentDate, range, setRange, setSelected
   }
 };
 
-  // ✅ DEFINE cells HERE
+  
   const cells = [];
 
-  // 1️⃣ Empty cells before month starts
+ 
   for (let i = 0; i < startDay; i++) {
     cells.push(<div key={`empty-start-${i}`} />);
   }
 
-  // 2️⃣ Actual days
+
   for (let i = 1; i <= totalDays; i++) {
     const day = new Date(
       currentDate.getFullYear(),
@@ -55,7 +55,7 @@ export default function CalendarGrid({ currentDate, range, setRange, setSelected
     );
   }
 
-  // 3️⃣ Fill remaining cells to ALWAYS 42
+
   while (cells.length < 42) {
     cells.push(<div key={`empty-end-${cells.length}`} />);
   }

@@ -29,7 +29,7 @@ useEffect(() => {
 
        <div className="p-4 grid md:grid-cols-2 gap-6">
   
-  {/* LEFT SIDE */}
+  
   <div>
     <CalendarHeader
       currentDate={currentDate}
@@ -45,7 +45,7 @@ useEffect(() => {
 />
   </div>
 
-  {/* RIGHT SIDE */}
+ 
   <div>
    <NotesPanel
   notes={notes}

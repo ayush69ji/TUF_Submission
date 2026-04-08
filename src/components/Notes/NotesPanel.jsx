@@ -27,7 +27,7 @@ export default function NotesPanel({ notes, setNotes, selectedDate, range }) {
     label = format(selectedDate, "dd MMM yyyy");
   }
 
-  // 🧠 GET NOTES (DEDUP)
+ 
   let currentNotes = [];
 
   if (range.start && range.end) {
@@ -38,17 +38,17 @@ export default function NotesPanel({ notes, setNotes, selectedDate, range }) {
 
       if (notes[d]) {
         (Array.isArray(notes[d]) ? notes[d] : []).forEach((note) => {
-          map.set(note.text, note); // ✅ FIXED
+          map.set(note.text, note); 
         });
       }
     }
 
     currentNotes = Array.from(map.values());
   } else {
-    currentNotes = Array.isArray(notes[key]) ? notes[key] : []; // ✅ FIXED
+    currentNotes = Array.isArray(notes[key]) ? notes[key] : []; 
   }
 
-  // ➕ ADD / EDIT
+
   const handleAddNote = () => {
     if (!input.trim()) return;
 
@@ -71,7 +71,7 @@ export default function NotesPanel({ notes, setNotes, selectedDate, range }) {
           existing.length < 3 &&
           !existing.some((n) => n.text === input)
         ) {
-          updatedNotes[d] = [...existing, noteObj]; // ✅ FIXED (no mutation)
+          updatedNotes[d] = [...existing, noteObj]; 
         } else {
           updatedNotes[d] = existing;
         }
@@ -96,7 +96,7 @@ export default function NotesPanel({ notes, setNotes, selectedDate, range }) {
     setInput("");
   };
 
-  // ❌ DELETE
+ 
   const handleDelete = (noteText) => {
     let updatedNotes = { ...notes };
 
@@ -119,7 +119,7 @@ export default function NotesPanel({ notes, setNotes, selectedDate, range }) {
     setNotes(updatedNotes);
   };
 
-  // ✏️ EDIT
+
   const handleEdit = (index) => {
     if (range.start && range.end) return;
 
