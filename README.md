@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📅 TUF Frontend Engineering Challenge – Interactive Calendar + Notes App
 
-## Getting Started
+## 🎯 Solution
 
-First, run the development server:
+This project is a solution to the **TUF Frontend Engineering Challenge – Interactive Calendar + Notes App**.
+The goal was to transform a static design inspiration (wall calendar) into a fully functional, responsive, and interactive web component using modern frontend technologies.
+This project strictly follows the challenge constraint of being **frontend-only**, without any backend or database integration.
+All interactions are handled on the client side.
 
-```bash
+---
+
+## 🚀 Live Demo
+
+🔗 https://tuf-submission-nine.vercel.app/
+
+---
+
+## 🎥 Video Demonstration
+
+📺 https://youtu.be/42QhgDm0Al8?si=Xh-a_jCjaG528fN5
+
+---
+
+## 🧠 Inspiration & Design Approach
+
+The UI is inspired by a **physical wall calendar**, focusing on:
+
+* Clean layout and visual hierarchy
+* A **hero image** acting as a visual anchor
+* Clearly structured calendar grid
+* Integrated notes section
+
+The design balances **aesthetics + usability**, ensuring users can interact with the calendar intuitively.
+
+---
+
+## 🛠 Core Features Implemented
+
+### 🖼️ Wall Calendar Aesthetic
+
+* Dedicated hero image section
+* Image changes according to the month
+* Calendar grid aligned with visual layout
+* Clean and minimal design inspired by real-world calendars
+
+---
+
+### 📆 Day Range Selector
+
+* Users can select:
+  * Start date
+  * End date
+* Visual states for:
+  * Start date
+  * End date
+  * In-between range
+* Handles edge cases:
+  * Same start & end date
+  * Smooth interaction flow
+
+---
+
+### 📝 Integrated Notes Section
+
+* Notes panel included in UI
+* Users can:
+  * Add general notes
+  * Notes with selected range of dates
+* Designed for quick and simple interaction
+* Dot on dates with notes 
+* User can delete the notes
+
+---
+
+### 📱 Fully Responsive Design
+
+#### 💻 Desktop
+
+* Structured layout (image + calendar + notes)
+* Maintains visual balance similar to inspiration
+
+#### 📱 Mobile
+
+* Layout stacks vertically
+* Calendar remains touch-friendly
+* Notes and selection remain fully usable
+
+---
+
+## ✨ Creative Enhancements
+
+To go beyond the baseline requirements:
+
+* Modular component architecture
+* Clean UI/UX improvements
+* Smooth selection experience
+* Different images according to the month
+* Manipulate notes
+
+---
+
+## 🛠️ Tech Stack
+
+* React / Next.js
+* JavaScript (ES6+)
+* CSS / Tailwind CSS
+* date-fns (for date manipulation)
+
+---
+
+## 📂 Project Structure
+
+src/
+└── components/
+├── Calendar/
+│   ├── CalendarHeader.jsx
+│   ├── CalendarGrid.jsx
+│   ├── DayCell.jsx
+├── Hero/
+│   ├── HeroImage.jsx
+├── Notes/
+│   ├── NotesPanel.jsx
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/ayush69ji/TUF_Submission.git
+cd TUF_Submission
+
+Install dependencies:
+
+npm install
+npm install date-fns
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 💡 Implementation Details
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Built using reusable React components for scalability
+* Managed state efficiently for date selection logic
+* Used date-fns for date calculations and formatting
+* Focused on UX for smooth date selection
+* Designed with responsive CSS techniques
+* No backend everything is stored locally
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Submission Contents
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This submission includes:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* ✅ Source Code (GitHub Repository)
+* ✅ Video Demonstration (YouTube)
+* ✅ Live Deployment (Vercel)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Evaluation Focus (Addressed)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project demonstrates:
+
+* Clean component architecture
+* Strong frontend fundamentals
+* Responsive design implementation
+* Thoughtful UI/UX decisions
+* Efficient state management
+
+---
+
+## 🙌 Author
+
+**Ayush Birthray**
+
+---
