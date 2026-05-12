@@ -2,7 +2,7 @@
 
 ## 🎯 Solution
 
-This project is a solution to the **Intership Frontend Engineering Challenge – Interactive Calendar + Notes App**.
+This project is a solution to the **Internship Frontend Engineering Challenge – Interactive Calendar + Notes App**.
 The goal was to transform a static design inspiration (wall calendar) into a fully functional, responsive, and interactive web component using modern frontend technologies.
 This project strictly follows the challenge constraint of being **frontend-only**, without any backend or database integration.
 All interactions are handled on the client side.
