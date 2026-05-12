@@ -1,8 +1,8 @@
-# 📅 TUF Frontend Engineering Challenge – Interactive Calendar + Notes App
+# 📅 Internship Frontend Engineering Challenge – Interactive Calendar + Notes App
 
 ## 🎯 Solution
 
-This project is a solution to the **TUF Frontend Engineering Challenge – Interactive Calendar + Notes App**.
+This project is a solution to the **Intership Frontend Engineering Challenge – Interactive Calendar + Notes App**.
 The goal was to transform a static design inspiration (wall calendar) into a fully functional, responsive, and interactive web component using modern frontend technologies.
 This project strictly follows the challenge constraint of being **frontend-only**, without any backend or database integration.
 All interactions are handled on the client side.
@@ -127,8 +127,8 @@ src/
 
 Clone the repository:
 
-git clone https://github.com/ayush69ji/TUF_Submission.git
-cd TUF_Submission
+git clone https://github.com/ayush69ji/Internship_Submission.git
+cd Internship_Submission
 
 Install dependencies:
 
